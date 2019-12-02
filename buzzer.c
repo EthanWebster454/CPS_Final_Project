@@ -13,7 +13,6 @@
 
 #define  BZRPin  4
 
-
 void makeSound()
 {
 	
@@ -22,15 +21,13 @@ void makeSound()
 		exit(1);
 	}
 
-	//while(1){
-		softToneWrite(BZRPin, 400);	
-		delay(200);
-		softToneWrite(BZRPin, 500);	
-		delay(200);
-		softToneWrite(BZRPin, 600);	
-		delay(200);
-		softToneWrite(BZRPin, 0);
-	//}
+	softToneWrite(BZRPin, 800);	
+	delay(200);
+	softToneWrite(BZRPin, 800);	
+	delay(200);
+	softToneWrite(BZRPin, 800);	
+	delay(200);
+	softToneWrite(BZRPin, 0);
 	
 }
 

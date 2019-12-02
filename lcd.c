@@ -13,6 +13,7 @@
 #include "monitor.h"
 
 int fd;
+char buf[4];
 
 void initLCD()
 {
@@ -26,7 +27,7 @@ void initLCD()
 
 	lcdPosition(fd, 0, 0); 
 	
-	lcdPuts (fd, "Room temp:");
+	lcdPuts (fd, "Room temp:  ");
 
 	lcdPosition(fd, 0, 1);
 	
@@ -34,15 +35,17 @@ void initLCD()
 	
 }
 
-void printTemp(float roomTemp, float remoteTemp){
+void printRoomTemp(double roomTemp){
 
-	char buf[4];
-
-	lcdPosition(fd, 10, 0);
+	lcdPosition(fd, 12, 0);
 
 	sprintf(buf, "%0.1f", roomTemp);
 
 	lcdPuts(fd, buf);
+}
+
+void printRemoteTemp(float remoteTemp){
+
 
 	lcdPosition(fd, 12, 1);
 
