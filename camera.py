@@ -1,3 +1,4 @@
+# sourced from https://www.raspberrypi.org/forums/viewtopic.php?t=123555
 import smtplib,ssl 
 from picamera import PiCamera  
 from PIL import Image
@@ -58,7 +59,7 @@ def send_an_email():
        s.ehlo()  
        s.starttls()  
        s.ehlo()  
-       s.login(user = emailAddr, password = 'newGMpass4$')  # User id $
+       s.login(user = emailAddr, password = '*******')  # User id $
        #s.send_message(msg)  
        s.sendmail(me, toaddr, msg.as_string())  
        s.quit()  
